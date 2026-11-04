@@ -1,0 +1,7 @@
+{
+  "name": "haruna-offpharm-ref",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "d1_databases": [ { "binding": "DB", "database_name": "haruna-select-260903", "database_id": "a9f04238-144b-430e-9c5c-ef507927665f" } ]
+}

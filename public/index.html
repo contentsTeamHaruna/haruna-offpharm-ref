@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>오프약국 매대 레퍼런스 픽</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#6e6e73;--line:#d2d2d7;--blue:#0071e3;--green:#248a3d;--orange:#b25000;--red:#d70015}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Apple SD Gothic Neo","Pretendard",sans-serif;background:var(--bg);color:var(--ink);letter-spacing:-.01em;padding-bottom:130px}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+nav{position:sticky;top:0;z-index:20;background:rgba(245,245,247,.75);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+.navin{max-width:1240px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.navin b{font-size:15px;font-weight:600}
+.me{margin-left:auto;font-size:13px;color:var(--sub)}
+.me button{color:var(--blue);margin-left:6px}
+.seg{display:inline-flex;background:rgba(118,118,128,.12);border-radius:9px;padding:2px;gap:2px}
+.seg button{font-size:13px;padding:6px 12px;border-radius:7px}
+.seg button.on{background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.12),0 3px 1px rgba(0,0,0,.04);font-weight:600}
+.chips{max-width:1240px;margin:0 auto;padding:0 24px 10px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:none;font-size:13px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
+.chips button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+header{max-width:1240px;margin:0 auto;padding:56px 24px 12px}
+.eyebrow{color:var(--orange);font-size:14px;font-weight:600;margin-bottom:8px}
+h1{font-size:48px;line-height:1.08;font-weight:700;letter-spacing:-.03em}
+.lead{font-size:20px;color:var(--sub);margin-top:14px;line-height:1.45;max-width:780px}
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:28px}
+.spec div{background:var(--card);border-radius:16px;padding:16px 18px}
+.spec small{display:block;color:var(--sub);font-size:12px;margin-bottom:4px}
+.spec span{font-size:17px;font-weight:600}
+section.grp{max-width:1240px;margin:0 auto;padding:44px 24px 0}
+.gh{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.gh .ltr{font-size:13px;font-weight:600;color:#fff;background:var(--ink);border-radius:8px;padding:3px 8px}
+.gh h2{font-size:28px;font-weight:700;letter-spacing:-.02em}
+.gh .brand{font-size:15px;color:var(--sub)}
+.gh .fit{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:#fff}
+.fit-상{color:var(--green)}.fit-중{color:var(--orange)}.fit-하{color:var(--red)}.fit-기준,.fit-전경{color:var(--sub)}
+.gd{font-size:15px;color:var(--sub);line-height:1.5;max-width:860px;margin-bottom:18px}
+.gd b{color:var(--ink);font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.tile{position:relative;border-radius:18px;overflow:hidden;background:#e8e8ed;aspect-ratio:3/4;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.tile:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.14)}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile.mine{box-shadow:0 0 0 3px var(--blue)}
+.pk{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:transform .15s}
+.pk:active{transform:scale(.9)}
+.pk svg{width:16px;height:16px;stroke:#86868b;stroke-width:3;fill:none}
+.mine .pk{background:var(--blue)}
+.mine .pk svg{stroke:#fff}
+.fn{position:absolute;top:12px;left:12px;font-size:11px;font-weight:600;color:#fff;background:rgba(0,0,0,.42);padding:4px 8px;border-radius:999px}
+.who{position:absolute;left:8px;right:8px;bottom:8px;display:flex;flex-wrap:wrap;gap:4px}
+.who span{font-size:11px;font-weight:600;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.who span.me{background:var(--blue);color:#fff}
+.empty{max-width:1240px;margin:60px auto;padding:0 24px;color:var(--sub);font-size:17px;text-align:center}
+.tray{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:rgba(29,29,31,.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);color:#fff;border-radius:999px;padding:8px 8px 8px 22px;display:flex;align-items:center;gap:10px;z-index:30;box-shadow:0 20px 50px rgba(0,0,0,.25);max-width:calc(100% - 24px)}
+.tray span{font-size:14px;white-space:nowrap}
+.tray .st{color:rgba(255,255,255,.6);font-size:12px}
+.tray button{font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.tray .w{background:#fff;color:var(--ink)}
+.tray .g{background:rgba(255,255,255,.14);color:#fff}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;z-index:40}
+.lb.show{display:flex}
+.lbm{flex:1;display:flex;align-items:center;justify-content:center;position:relative;min-width:0}
+.lbm img{max-width:calc(100% - 120px);max-height:92vh;border-radius:12px}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:22px}
+.arr.l{left:16px}.arr.r{right:16px}
+.side{width:340px;background:#fff;padding:28px 24px;display:flex;flex-direction:column;gap:14px;overflow:auto}
+.side .x{align-self:flex-end;font-size:14px;color:var(--blue)}
+.side .type{font-size:12px;color:var(--sub);font-weight:600}
+.side h3{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.side p{font-size:14px;color:var(--sub);line-height:1.5}
+.side .big{background:var(--blue);color:#fff;border-radius:980px;padding:12px;font-size:16px;font-weight:600}
+.side .big.on{background:#e8f2fd;color:var(--blue)}
+.side textarea{width:100%;min-height:80px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:14px;resize:vertical;outline:none}
+.side textarea:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,113,227,.15)}
+.side textarea:disabled{background:#f5f5f7}
+.side .pl{font-size:13px;line-height:1.7}
+.side .pl div{border-top:1px solid #f0f0f2;padding:6px 0}
+.side .pl b{font-weight:600}
+.side .hint{font-size:12px;color:var(--sub)}
+.login{position:fixed;inset:0;background:rgba(245,245,247,.7);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);display:none;align-items:center;justify-content:center;z-index:60}
+.login.show{display:flex}
+.login form{background:#fff;border-radius:24px;padding:36px 32px;width:min(380px,92vw);box-shadow:0 30px 80px rgba(0,0,0,.15);display:flex;flex-direction:column;gap:14px;text-align:center}
+.login h3{font-size:24px;font-weight:700}
+.login p{font-size:14px;color:var(--sub);line-height:1.5}
+.login input{border:1px solid var(--line);border-radius:12px;padding:13px 14px;font:inherit;font-size:17px;outline:none;text-align:center}
+.login input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,113,227,.15)}
+.login button{background:var(--blue);color:#fff;border-radius:12px;padding:13px;font-size:17px;font-weight:600}
+.toast{position:fixed;top:80px;left:50%;transform:translateX(-50%);background:rgba(29,29,31,.9);color:#fff;font-size:14px;padding:10px 18px;border-radius:999px;opacity:0;transition:opacity .3s;z-index:70;pointer-events:none}
+.toast.show{opacity:1}
+@media (max-width:760px){h1{font-size:34px}.lead{font-size:17px}.tiles{grid-template-columns:repeat(2,1fr);gap:10px}.lb{flex-direction:column}.lbm{flex:none;height:58vh}.lbm img{max-width:100%;max-height:56vh}.side{width:100%;flex:1}.arr{display:none}.me{margin-left:0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="navin">
+    <b>오프약국 매대 레퍼런스</b>
+    <div class="seg" id="seg">
+      <button data-v="grp" class="on">유형별</button>
+      <button data-v="hot">많이 고른 순</button>
+      <button data-v="mine">내 픽</button>
+    </div>
+    <div class="me" id="me"></div>
+  </div>
+  <div class="chips" id="chips"></div>
+</nav>
+
+<header>
+  <div class="eyebrow">명동 오프약국 · 2026-10-16 촬영 55장</div>
+  <h1>마음에 드는 매대를 골라 주세요.</h1>
+  <p class="lead">사진 55장을 모두 펼쳤습니다. 오른쪽 위 동그라미를 누르면 고른 것으로 저장되고, 팀원 모두가 누가 골랐는지 함께 봅니다. 사진을 누르면 크게 보고 가져올 점을 적을 수 있습니다.</p>
+  <div class="spec">
+    <div><small>규격</small><span>350 × 220 × 260 mm</span></div>
+    <div><small>진열 제품</small><span>팩클렌저 · 세럼 · 바디크림</span></div>
+    <div><small>소재</small><span>유광 핑크 아크릴</span></div>
+    <div><small>가격</small><span>매대에 넣지 않음</span></div>
+    <div><small>문구</small><span>국문 + 영문</span></div>
+  </div>
+</header>
+
+<div id="list"></div>
+
+<div class="tray"><span id="cnt">내 픽 0장</span><span class="st" id="st"></span><button class="g" id="cpAll">팀 집계 복사</button><button class="w" id="cpMe">내 픽 복사</button></div>
+
+<div class="lb" id="lb">
+  <div class="lbm"><img id="lbImg" alt=""><button class="arr l" id="prev">‹</button><button class="arr r" id="next">›</button></div>
+  <div class="side">
+    <button class="x" id="close">닫기</button>
+    <div class="type" id="lbType"></div>
+    <h3 id="lbTitle"></h3>
+    <p id="lbDesc"></p>
+    <button class="big" id="lbPick">고르기</button>
+    <textarea id="lbMemo" placeholder="가져올 점을 적어 주세요. 예: 아치 모양만, 색은 핑크로"></textarea>
+    <div class="pl" id="lbPl"></div>
+    <div class="hint">키보드 ← → 로 넘기고 스페이스로 고릅니다.</div>
+  </div>
+</div>
+
+<div class="login" id="login"><form id="lf">
+  <h3>이름을 알려 주세요</h3>
+  <p>고른 사진은 이름별로 저장됩니다. 같은 이름으로 다시 들어오면 이어서 고를 수 있습니다.</p>
+  <input id="name" maxlength="20" placeholder="예: 다형" autocomplete="off">
+  <button type="submit">시작하기</button>
+</form></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const G=[
+ {k:'A',title:'아치 슬롯',brand:'Rejuve',type:'슬롯형',fit:'상',ids:['IMG_6188','IMG_6197','IMG_6198'],
+  form:'제품마다 아치형 등판을 하나씩 세우고 아래를 컬러 받침으로 묶었습니다.',why:'3종을 아치 3개로 나누면 350mm 폭에 맞습니다. 튜브와 세럼을 세워 꽂기 좋습니다.'},
+ {k:'B',title:'투톤 아치 백보드',brand:'YOUNGWONHEE 계열',type:'백보드형',fit:'상',ids:['IMG_6207'],
+  form:'블루와 핑크 아치 패널 두 장을 세우고 받침도 같은 두 색으로 나눴습니다.',why:'하루나 핑크와 결이 가장 가깝습니다. 패널을 3장으로 늘리면 제품별 설명을 나눌 수 있습니다.'},
+ {k:'C',title:'슬로건 받침 + 원형 홀더',brand:'THOME',type:'받침형',fit:'상',ids:['IMG_6202','IMG_6203','B_1228'],
+  form:'핑크 받침 앞면에 한 줄 슬로건을 크게 넣고 윗면에 원형 홀더를 뚫었습니다.',why:'세럼 병을 홈에 꽂으면 넘어지지 않습니다. 받침 앞면이 매대의 얼굴이 됩니다.'},
+ {k:'D',title:'다이컷 헤더',brand:'Dr.Melaxin',type:'백보드형',fit:'중',ids:['IMG_6209','IMG_6208','B_1237'],
+  form:'제품 모양을 딴 다이컷 헤더를 받침 위로 높게 세웠습니다.',why:'260mm 높이를 다 쓰는 형태라 시선을 가장 많이 끕니다. 위 선반과 간격을 먼저 확인해야 합니다.'},
+ {k:'E',title:'컬러 받침 + 투명 칸막이',brand:'Madeca · Dr.Melaxin',type:'받침형',fit:'상',ids:['IMG_6204','IMG_6205','IMG_6201','IMG_6206'],
+  form:'투명 칸막이 트레이 아래에 인쇄한 컬러 받침을 깔았습니다.',why:'구조가 가장 단순해 제작비와 기간이 짧습니다. 투명 칸막이로 3종을 나눠 세우기 쉽습니다.'},
+ {k:'F',title:'일체형 백보드 + 받침',brand:'비타민 세럼 브랜드',type:'백보드형',fit:'중',ids:['IMG_6191'],
+  form:'오렌지 받침과 뒤판을 하나로 이어 만들었습니다.',why:'단색 일체형이라 멀리서도 브랜드 색이 읽힙니다. 뒤판에 넣을 내용을 따로 정해야 합니다.'},
+ {k:'G',title:'단일 컬러 단상',brand:'RE:XRAN',type:'받침형',fit:'상',ids:['IMG_6189'],
+  form:'유광 민트 아크릴 단상 하나에 제품을 일렬로 올렸습니다.',why:'뉴욕 매대의 유광 핑크와 같은 방식입니다. 문구 부담이 적고 고급스러워 보입니다.'},
+ {k:'H',title:'모델 포스터 백보드',brand:'egf · Dr.Althea',type:'POP형',fit:'하',ids:['IMG_6195','IMG_6196','B_1226','B_1233'],
+  form:'모델 사진 카드를 받침 뒤에 세우거나 선반에 걸었습니다.',why:'우리 매대에 쓸 모델 컷과 사용 권리가 없습니다. 쓰려면 촬영부터 해야 합니다.'},
+ {k:'I',title:'곡면 프론트 스커트',brand:'Bluepill · Dr.deep',type:'POP형',fit:'하',ids:['IMG_6199','IMG_6200','IMG_6212','B_1243'],
+  form:'선반 앞에 휘어진 인쇄 판을 덧대고 제품을 계단으로 기울여 세웠습니다.',why:'약국의 노란 가격표를 가립니다. 곡면 가공이라 제작비와 기간이 늘어납니다.'},
+ {k:'J',title:'스텝 넘버 받침',brand:'ASCE',type:'받침형',fit:'중',ids:['IMG_6214'],
+  form:'받침 앞면에 1, 2, 3 숫자를 크게 넣어 사용 순서를 보여 줍니다.',why:'클렌저, 세럼, 바디크림을 순서로 묶으면 루틴으로 읽힙니다.'},
+ {k:'K',title:'원형 디스크 백드롭',brand:'Reju-All',type:'백보드형',fit:'중',ids:['IMG_6211','IMG_6210','IMG_6213','B_1227'],
+  form:'제품 뒤에 원형 디스크를 세우고 받침 앞에 브랜드 띠를 둘렀습니다.',why:'원형 하나로 포인트를 줘서 단순합니다. 디스크를 핑크 유광으로 바꾸면 우리 색이 됩니다.'},
+ {k:'L',title:'원형 막대 POP',brand:'Rejuve-S 옆 브랜드',type:'POP형',fit:'중',ids:['B_1244'],
+  form:'투명 칸막이 위에 원형 다이컷 POP를 막대로 꽂았습니다.',why:'본체와 별도로 붙이는 부착물이라 나중에 더하기 쉽습니다.'},
+ {k:'M',title:'투명 칸막이 기본형',brand:'Torriden · medicube · d\'Alba · Secret Key 외',type:'기본형',fit:'기준',
+  ids:['B_1239','B_1241','B_1242','B_1225','B_1229','B_1224','B_1223','B_1230','B_1231','B_1232','B_1234','B_1235','B_1236','B_1238','B_1240','B_1222','IMG_6192'],
+  form:'약국 기본 투명 칸막이에 제품만 세웠습니다. 브랜드 색은 패키지와 선반 앞 띠로만 보입니다.',why:'전용 매대 없이 들어갔을 때의 모습입니다. 다른 유형을 비교하는 기준입니다.'},
+ {k:'Z',title:'매장 전경',brand:'오프약국 명동',type:'전경',fit:'전경',ids:['IMG_6186','IMG_6187','IMG_6190','IMG_6193','IMG_6194','B_1213','B_1215','B_1221'],
+  form:'매장 정면과 선반 배치입니다.',why:'우리 매대가 놓일 선반 높이와 주변 밀도를 볼 때 씁니다.'}
+];
+const PH=G.flatMap(g=>g.ids.map(id=>({id,g})));
+const byId=Object.fromEntries(PH.map(p=>[p.id,p]));
+const API=location.hostname.endsWith('workers.dev')?'':'https://haruna-offpharm-ref.contents-e27.workers.dev';
+const $=s=>document.getElementById(s);
+let me=localStorage.getItem('pharmName')||'',mine=new Set(),memo={},all=[],view='grp',chip='전체',lbList=[],lbI=0,saveT;
+
+$('chips').innerHTML=['전체',...G.map(g=>g.k)].map(c=>`<button data-c="${c}" class="${c==='전체'?'on':''}">${c==='전체'?'전체':c+'. '+G.find(g=>g.k===c).title}</button>`).join('');
+$('chips').onclick=e=>{const c=e.target.dataset.c;if(!c)return;chip=c;document.querySelectorAll('#chips button').forEach(b=>b.classList.toggle('on',b.dataset.c===c));render()};
+$('seg').onclick=e=>{const v=e.target.dataset.v;if(!v)return;view=v;document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));$('chips').style.display=v==='grp'?'':'none';render()};
+
+function others(){const m={};all.forEach(p=>{if(p.name===me)return;(p.ids||[]).forEach(id=>(m[id]=m[id]||[]).push(p.name))});return m}
+function pickers(id){const o=others()[id]||[];return mine.has(id)?[me,...o]:o}
+const ck='<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+function tile(p){
+  const w=pickers(p.id);
+  return `<div class="tile ${mine.has(p.id)?'mine':''}" data-id="${p.id}"><img loading="lazy" src="t/${p.id}.jpg" alt=""><span class="fn">${p.g.k} · ${p.id.replace('IMG_','')}</span><button class="pk" data-pk="${p.id}" aria-label="고르기">${ck}</button><div class="who">${w.map(n=>`<span class="${n===me?'me':''}">${n}</span>`).join('')}</div></div>`;
+}
+function render(){
+  let h='';
+  if(view==='grp'){
+    G.filter(g=>chip==='전체'||g.k===chip).forEach(g=>{
+      h+=`<section class="grp"><div class="gh"><span class="ltr">${g.k}</span><h2>${g.title}</h2><span class="brand">${g.brand}</span><span class="fit fit-${g.fit}">${g.fit==='기준'?'비교 기준':g.fit==='전경'?'참고':'하루나 적합 '+g.fit}</span></div>
+      <p class="gd">${g.form} <b>하루나 적용</b> ${g.why}</p><div class="tiles">${g.ids.map(id=>tile(byId[id])).join('')}</div></section>`;
+    });
+  }else{
+    let list=PH.slice();
+    if(view==='mine')list=list.filter(p=>mine.has(p.id));
+    else{list=list.filter(p=>pickers(p.id).length);list.sort((a,b)=>pickers(b.id).length-pickers(a.id).length)}
+    h=list.length?`<section class="grp"><div class="tiles">${list.map(tile).join('')}</div></section>`:`<p class="empty">${view==='mine'?'아직 고른 사진이 없습니다.':'아직 아무도 고르지 않았습니다.'}</p>`;
+  }
+  $('list').innerHTML=h;
+  lbList=[...document.querySelectorAll('#list .tile')].map(t=>t.dataset.id);
+  $('cnt').textContent=`내 픽 ${mine.size}장`;
+}
+function toggle(id){mine.has(id)?(mine.delete(id),delete memo[id]):mine.add(id);render();if($('lb').classList.contains('show'))fillLb();save()}
+function save(){$('st').textContent='저장 중';clearTimeout(saveT);saveT=setTimeout(async()=>{
+  try{const r=await fetch(API+'/api/picks',{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify({name:me,ids:[...mine],memo})});if(!r.ok)throw 0;$('st').textContent='저장됨'}
+  catch(_){$('st').textContent='저장 실패, 다시 시도'}},500)}
+$('list').addEventListener('click',e=>{
+  const pk=e.target.closest('[data-pk]');if(pk){e.stopPropagation();toggle(pk.dataset.pk);return}
+  const t=e.target.closest('.tile');if(t){lbI=lbList.indexOf(t.dataset.id);openLb()}
+});
+function openLb(){$('lb').classList.add('show');fillLb()}
+function fillLb(){
+  const id=lbList[lbI],p=byId[id],g=p.g;
+  $('lbImg').src=`img/${id}.jpg`;
+  $('lbType').textContent=`${g.k} · ${g.type} · ${id}  (${lbI+1}/${lbList.length})`;
+  $('lbTitle').textContent=`${g.title}`;
+  $('lbDesc').textContent=`${g.brand}. ${g.form}`;
+  const on=mine.has(id);$('lbPick').textContent=on?'고름':'고르기';$('lbPick').classList.toggle('on',on);
+  $('lbMemo').disabled=!on;$('lbMemo').value=memo[id]||'';$('lbMemo').placeholder=on?'가져올 점을 적어 주세요. 예: 아치 모양만, 색은 핑크로':'고른 뒤 메모를 적을 수 있습니다.';
+  const notes=all.filter(x=>x.name!==me&&(x.ids||[]).includes(id));
+  $('lbPl').innerHTML=notes.length?notes.map(x=>`<div><b>${x.name}</b>${x.memo&&x.memo[id]?' · '+esc(x.memo[id]):' 고름'}</div>`).join(''):'';
+}
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('lbMemo').oninput=e=>{const id=lbList[lbI];if(!mine.has(id))return;memo[id]=e.target.value;save()};
+$('lbPick').onclick=()=>toggle(lbList[lbI]);
+$('prev').onclick=()=>{lbI=(lbI-1+lbList.length)%lbList.length;fillLb()};
+$('next').onclick=()=>{lbI=(lbI+1)%lbList.length;fillLb()};
+$('close').onclick=()=>$('lb').classList.remove('show');
+$('lb').onclick=e=>{if(e.target===$('lb')||e.target.classList.contains('lbm'))$('lb').classList.remove('show')};
+document.addEventListener('keydown',e=>{
+  if(!$('lb').classList.contains('show')||e.target.tagName==='TEXTAREA')return;
+  if(e.key==='Escape')$('lb').classList.remove('show');
+  if(e.key==='ArrowLeft')$('prev').click();
+  if(e.key==='ArrowRight')$('next').click();
+  if(e.key===' '){e.preventDefault();$('lbPick').click()}
+});
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1600)}
+async function copy(t){try{await navigator.clipboard.writeText(t)}catch(_){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}toast('복사했습니다')}
+$('cpMe').onclick=()=>{
+  const rows=G.flatMap(g=>g.ids.filter(id=>mine.has(id)).map(id=>`${g.k}. ${g.title} · ${id}${memo[id]?' · '+memo[id]:''}`));
+  copy([`[오프약국 매대 레퍼런스] ${me} 픽 ${rows.length}장`,'규격 350×220×260mm · 팩클렌저·세럼·바디크림 · 유광 핑크',...rows].join('\n'));
+};
+$('cpAll').onclick=async()=>{
+  await load();const cnt={};all.forEach(p=>(p.ids||[]).forEach(id=>(cnt[id]=cnt[id]||[]).push(p.name)));
+  const gs=G.map(g=>({g,n:g.ids.reduce((s,id)=>s+(cnt[id]||[]).length,0)})).filter(x=>x.n).sort((a,b)=>b.n-a.n);
+  const lines=['[오프약국 매대 레퍼런스 팀 집계]',`참여 ${all.filter(p=>(p.ids||[]).length).map(p=>p.name).join(', ')}`,''];
+  gs.forEach(({g,n})=>{lines.push(`${g.k}. ${g.title} (${g.brand}) 총 ${n}표`);g.ids.filter(id=>cnt[id]).sort((a,b)=>cnt[b].length-cnt[a].length).forEach(id=>lines.push(`- ${id}: ${cnt[id].join(', ')}`))});
+  copy(lines.join('\n'));
+};
+async function load(){try{all=await (await fetch(API+'/api/picks',{cache:'no-store'})).json()}catch(_){all=all||[]}}
+async function start(){
+  $('login').classList.remove('show');
+  $('me').innerHTML=`${esc(me)} 님<button id="sw">이름 바꾸기</button>`;
+  $('sw').onclick=()=>{$('login').classList.add('show');$('name').focus()};
+  await load();const m=all.find(p=>p.name===me);mine=new Set(m?m.ids:[]);memo=m&&m.memo?{...m.memo}:{};
+  render();$('st').textContent='';
+}
+$('lf').onsubmit=e=>{e.preventDefault();const n=$('name').value.trim();if(!n)return;me=n;localStorage.setItem('pharmName',me);start()};
+setInterval(async()=>{if(!me||document.hidden)return;await load();if(!$('lb').classList.contains('show'))render();else fillLb()},20000);
+render();
+if(me){$('name').value=me;start()}else{$('login').classList.add('show');$('name').focus()}
+</script>
+</body>
+</html>
